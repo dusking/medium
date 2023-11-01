@@ -1,4 +1,4 @@
-![alt text](https://github.com/dusking/WordDifficulty/blob/main/cover_image_transcript_ifficulty.png?raw=true)
+![alt text](https://github.com/dusking/medium_src/blob/main/img/cover_image_transcript_ifficulty.png?raw=true)
 
 
 # Unlocking Transcript Difficulty Of Movies: A Linguistic Analysis
@@ -36,7 +36,7 @@ We'll leverage the power of Pandas' DataFrame to streamline the process of summa
 
 ## TL;DR: How to Use the Code - A Quick Guide
 
-For easy access to the complete source code of the class, you can find it [here](https://github.com/dusking/WordDifficulty/blob/main/movie_vocabulary_analysis.py).
+For easy access to the complete source code of the class, you can find it [here](https://github.com/dusking/medium_src/blob/main/src/02_movie_vocabulary_analysis.pyy).
 
 Using this code is a piece of cake:
 

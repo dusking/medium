@@ -1,4 +1,4 @@
-![alt text](https://github.com/dusking/WordDifficulty/blob/main/cover_image_1.jpg?raw=true)
+![alt text](https://github.com/dusking/medium_src/blob/main/img/cover_image_1.jpg?raw=true)
 
 
 # Estimating Word Difficulty In English Using Python: A Practical Guide
@@ -38,7 +38,7 @@ These libraries are the foundation for our word difficulty estimation journey.
 
 ## TL;DR: How to Use the Code - A Simple Guide
 
-For quick access to the full source code of the class, you can find it here: [WordDifficulty Source Code](https://github.com/dusking/WordDifficulty/blob/main/word_difficulty.py).
+For quick access to the full source code of the class, you can find it here: [WordDifficulty Source Code](https://github.com/dusking/medium_src/blob/main/src/01_word_difficulty.py).
 
 Using this code is straightforward:
 
@@ -236,7 +236,7 @@ a word can be difficult for one person and easy for another.
 The goal of this article was to present a technique for scoring word difficulty using the NLTK library and corpora.
 
 The `WordDifficulty` class makes this task accessible and straightforward. 
-For the full source code of the class, you can find it here: [WordDifficulty Source Code](https://github.com/dusking/WordDifficulty/blob/main/word_difficulty.py).
+For the full source code of the class, you can find it here: [WordDifficulty Source Code](https://github.com/dusking/medium_src/blob/main/src/01_word_difficulty.py).
 
 In the next article, we will explore how to use the WordDifficulty class to analyze different movies and TV series 
 to determine which ones contain more difficult words or easy words. 

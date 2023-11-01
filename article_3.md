@@ -1,14 +1,16 @@
 # How to use TF-IDF to retrieve Most Significant Words of a file - A Practical Python Guide
 
+![alt text](https://github.com/dusking/medium_src/blob/main/img/cover_most_significant_words.png?raw=true)
+
 ## What is TF-IDF?
 
-TF-IDF, which stands for Term Frequency-Inverse Document Frequency, is a powerful natural language processing technique
-that plays a pivotal role in extracting the most significant words from a document. This method evaluates the importance
-of a word within a specific document by considering two crucial factors: term frequency (TF) and inverse document
-frequency (IDF). The term frequency quantifies how often a word appears within the document, while the inverse document
-frequency assesses how unique or rare the word is across a larger collection of documents. By combining these two
-metrics, TF-IDF effectively measures the significance of a word in a specific context. It's a key tool in text analysis,
-information retrieval, and content summarization, and understanding how to use it can unlock a world of insights from
+TF-IDF, which stands for Term Frequency-Inverse Document Frequency, is a powerful natural language processing technique 
+that plays a pivotal role in extracting the most significant words from a document. This method evaluates the importance 
+of a word within a specific document by considering two crucial factors: term frequency (TF) and inverse document 
+frequency (IDF). The term frequency quantifies how often a word appears within the document, while the inverse document 
+frequency assesses how unique or rare the word is across a larger collection of documents. By combining these two 
+metrics, TF-IDF effectively measures the significance of a word in a specific context. It's a key tool in text analysis, 
+information retrieval, and content summarization, and understanding how to use it can unlock a world of insights from 
 textual data.
 
 ## Applying TF-IDF to Movie and TV Show Transcripts
@@ -28,12 +30,6 @@ To make this process seamless via code, we'll employ
 the [OpenSubtitles.com Python wrapper](https://github.com/dusking/opensubtitles-com).
 This wrapper enables us to search and download subtitles using the OpenSubtitles API.
 If you haven't installed it yet, you can easily do so with pip:
-
-Getting Started
-In this guide, we'll utilize [OpenSubtitles.com](https://opensubtitles.com/) to access subtitles for our features. To
-streamline this process programmatically, we'll leverage
-the [OpenSubtitles.com Python wrapper](https://github.com/dusking/opensubtitles-com). This wrapper grants us the ability
-to search and download subtitles seamlessly via the OpenSubtitles API.
 
 ```bash
 pip install opensubtitlescom
@@ -56,7 +52,7 @@ vectorization, which we'll use in our analysis.
 ## TL;DR: Unlocking the Power of TF-IDF with MostSignificantWords
 
 For those eager to dive into the code, the complete source code of the `MostSignificantWords` class is
-available [here](https://github.com/dusking/WordDifficulty/blob/main/most_significant_words.py).
+available [here](https://github.com/dusking/medium_src/blob/main/src/03_most_significant_words.py).
 
 Using this code is a breeze:
 
@@ -84,13 +80,13 @@ most_significant_words.get_tfidf_significant_words(features)
     {
         'film': 'fight club',
         'words': 'tyler, fuck, ha, ok, go, fight, marla, know, bob, get, yeah, ohh, want, hey, one, like, sir, come, '
-                  'right, look, got, durden, club, oh, let, could, paulson, robert, think, would'
+                 'right, look, got, durden, club, oh, let, could, paulson, robert, think, would'
     },
     {
         'film': 'goldeneye',
         'words': 'jame, bond, bori, one, goldeney, severnaya, natalya, know, ye, janu, ourumov, good, satellit, go, '
                  'kill, alec, helicopt, set, code, minist, two, minut, defens, england, moneypenni, come, like, '
-                  'right, let, three'
+                 'right, let, three'
     },
     {
         'film': 'Casino Royale',
@@ -251,19 +247,19 @@ normalization technique that reduces words to their root or base form.
 Here's the code for the `custom_tokenizer` function:
 
 ```python
-  def custom_tokenizer(text):
-    words = nltk.word_tokenize(text)
+def custom_tokenizer(text):
+ words = nltk.word_tokenize(text)
 
-    # Apply stemming
-    stemmer = PorterStemmer()
-    base_form_stemmed_words = []
-    for word in words:
-        word = stemmer.stem(word)  # handle steamid words like "he's"
-        if "'" in word:
-            # skip words like I'm - since they will be break into I and 'm
-            continue
-        base_form_stemmed_words.append(word)
-    return base_form_stemmed_words
+ # Apply stemming
+ stemmer = PorterStemmer()
+ base_form_stemmed_words = []
+ for word in words:
+     word = stemmer.stem(word)  # handle steamid words like "he's"
+     if "'" in word:
+         # skip words like I'm - since they will be break into I and 'm
+         continue
+     base_form_stemmed_words.append(word)
+ return base_form_stemmed_words
 ```
 
 This custom tokenization process enhances text data preparation for analysis and ensures that words are represented in
@@ -342,11 +338,11 @@ Here's the complete source code for the function:
 This method encapsulates the core of the TF-IDF analysis, enabling you to uncover the most significant words in your
 movie transcripts for in-depth exploration and understanding.
 
-
 ## Conclusion
 
 n this down-to-earth guide, we've explored how to dig out the most important words from movie transcripts using a cool
-Python tool called `MostSignificantWords`. It's like having a superpower for understanding what really matters in a bunch
+Python tool called `MostSignificantWords`. It's like having a superpower for understanding what really matters in a
+bunch
 of text.
 
 We learned how to grab subtitles, tidy up the text, and use this TF-IDF thing to spot the words that carry the most
