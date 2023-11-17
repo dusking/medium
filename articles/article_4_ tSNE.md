@@ -122,10 +122,10 @@ To make it happen, we'll follow the same steps we discussed earlier:
    leverage techniques like TF-IDF.
 
 The first two steps have already been taken care of by the `MostSignificantWords` class, as mentioned in our previous
-article: [How to use TF-IDF to retrieve Most Significant Words of a file](https://medium.com/python-in-plain-english/how-to-use-tf-idf-to-retrieve-most-significant-words-of-a-file-a-practical-python-guide-1c0426ba9567)
-.
+article: [How to use TF-IDF to retrieve Most Significant Words of a file](https://medium.com/python-in-plain-english/how-to-use-tf-idf-to-retrieve-most-significant-words-of-a-file-a-practical-python-guide-1c0426ba9567).
 
-Here is the code for that:
+the complete source code of the `TSne` class is
+available [here](https://github.com/dusking/medium_src/blob/main/src/a04_tsne.py). Here is the main function:
 
 ```python
 def run(self):
@@ -294,6 +294,6 @@ What's even more exciting is that this isn't just about entertainment. It has re
 3. It makes it easier to organize and search through your media collection.
 4. It enhances your viewing experience, making it more enjoyable.
 
-5. So, next time you have a bunch of transcripts to explore, put on your t-SNE glasses and uncover the fascinating
+So, next time you have a bunch of transcripts to explore, put on your t-SNE glasses and uncover the fascinating
 connections hidden within your favorite movies and TV shows. It's like having a magical tool that turns data into
 stories you can see and understand. Happy exploring!
