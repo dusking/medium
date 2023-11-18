@@ -1,4 +1,4 @@
-# Estimating Word Difficulty In English Using Machine Learning (ML) - a practical python guid
+# Estimating Word Difficulty In English Using Machine Learning (ML) - a practical python guide
 
 ## Introduction
 
@@ -17,6 +17,29 @@ Realizing these challenges made it clear that a new way of doing things was need
 machine learning (ML) approach to tackle these issues. I'll talk about the `WordDifficultyML` class, which uses a
 trained
 ML model to estimate word difficulty, providing a more detailed and flexible solution.
+
+## TL;DR: How to Utilize the Code - A Simple Guide
+
+For quick access to the full source code of the class, you can find it here: [WordDifficultyML Source Code](https://github.com/dusking/medium_src/blob/main/src/a05_word_difficulty_ml.py).
+
+Using this code is straightforward:
+
+1. Initialization: Begin by initializing the WordDifficultyML class.
+2. Model Setup: Execute the set_model method, which not only sets up the machine learning model but also trains it.
+3. Evaluate Word Difficulty: Employ the eval_word method with a given word, and it will furnish you with the assessed difficulty score based on the trained model.
+
+Here's a quick example in Python:
+
+```python
+word_difficulty = WordDifficultyML()
+word_difficulty.set_model() 
+
+# Evaluate word difficulty
+print(word_difficulty.eval_word("Love"))  # Example 1
+print(word_difficulty.eval_word("Ratcheted"))  # Example 2
+```
+
+Feel free to explore and adapt the code for your specific needs!
 
 ## Benefits of Employing Machine Learning in Word Difficulty Estimation
 
@@ -82,11 +105,11 @@ initialization, instances of `WordDifficulty` and `WordNetLemmatizer` are create
 Here's the code snippet capturing the initialization:
 
 ```
-  def __init__(self):
-      self.word_difficulty = WordDifficulty()
-      self.lemmatizer = WordNetLemmatizer()
-      self.model = None
-      self.scaler = None
+def __init__(self):
+  self.word_difficulty = WordDifficulty()
+  self.lemmatizer = WordNetLemmatizer()
+  self.model = None
+  self.scaler = None
 ```
 
 This initialization sets the stage for a comprehensive and flexible framework within the WordDifficultyML class,
