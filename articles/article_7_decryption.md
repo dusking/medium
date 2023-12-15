@@ -1,11 +1,11 @@
 # Encrypting Secrets with JS and Decrypting with Python
 # A Concise Handbook
 
-## Introduction - Understanding the Complexity
+## Introduction - Navigating the Intricacies
 
-Encrypting user-provided secrets on the front end and decrypting them on the back end may seem deceptively simple,
-but the devil lies in the details. Even minor mistakes in encryption can lead to significant issues, 
-potentially resulting in complete failure.
+Encrypting and decrypting user-provided secrets may appear deceptively simple when split between the front end and back end. 
+However, the intricacies involved demand meticulous attention to detail. 
+Even minor errors during encryption or decryption process can lead to significant issues, potentially resulting in failure.
 
 In my exploration of this process, I delved into encryption and decryption using both Python and JavaScript.
 Despite their apparent similarities, I encountered perplexing errors when attempting to encrypt in JS and decrypt in Python.
@@ -13,15 +13,15 @@ After identifying and rectifying these subtle mistakes, my goal is to share the 
 
 ## Getting Started - Essential Tools
 
-To embark on this encryption journey, I utilized the CryptoJS package for the front end (installable via npm):
+To embark on this encryption journey, I relied on the CryptoJS package for the front end, installable via npm:
 
 ```
 npm install crypto-js
 ```
 
 On the back end, the pyCryptodome Python package proved invaluable. 
-It's worth noting that PyCryptodome succeeded the PyCrypto package, offering self-contained cryptographic primitives. 
-Installation is a breeze with pip:
+Notably, PyCryptodome succeeded the PyCrypto package, offering self-contained cryptographic primitives. 
+Installation is straightforward with pip:
 
 ```
 pip install pycryptodome
@@ -76,6 +76,11 @@ decrypt("qvBJdcdH76P0R1xmk/mSKA==")
 
 ## The front side
 
+CryptoJS supports a wide range of cryptographic algorithms, including symmetric key encryption algorithms like AES (Advanced Encryption Standard), 
+hashing functions like SHA-256, and more. 
+Its modular design allows developers to selectively include specific algorithms, minimizing the footprint of the library based on project requirements.
+In the context of our encryption process, we leverage the robust AES encryption, a widely adopted symmetric algorithm, to securely encrypt text.
+
 Setting up the front side is straightforward. 
 Start by obtaining the encryption's secret key, securely stored as an environment variable. 
 For the Initialization Vector (IV), a random 16-character string is generated. 
@@ -118,14 +123,22 @@ export function encrypt(text) {
 
 ## The back side
 
-On the backend, I go the extra mile by providing both encryption and decryption functions. 
+On the backend, I provide both encryption and decryption functions. 
 The decryption function seamlessly works with the JavaScript encryption function from the front side.
 
 The encryption function mirrors the one on the front side, employing Python's secrets.token_bytes 
 to generate a random byte string for the Initialization Vector (IV). 
-This IV, combined with the secret key, is used to create the ciphertext.
+This IV, combined with the secret key, is used to create the ciphertext using the Crypto module.
 
-The code is as follow:
+The Crypto module encompasses a range of submodules, each designed to address specific cryptographic needs. 
+These submodules include Crypto.Cipher, Crypto.Signature, Crypto.Hash, Crypto.Random, and more. 
+Together, they form a cohesive toolkit for implementing cryptographic algorithms in Python.
+
+The Crypto.Cipher submodule is integral for implementing symmetric key algorithms like AES (Advanced Encryption Standard and other block ciphers.
+
+The pyCryptodome library, where the Crypto module resides, is a self-contained Python package that builds upon the original PyCrypto library. 
+
+The Crypto helper class code is as follow:
 
 ```python
 import secrets
